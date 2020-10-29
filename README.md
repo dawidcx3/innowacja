@@ -15,3 +15,4 @@ Creation of basic project in django.
 ```
 django-admin.exe startproject mysite
 ```
+The whole folder is attached on GitHub.
