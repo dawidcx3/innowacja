@@ -8,3 +8,10 @@ I will put my all files in this repository and I will try to create a good descr
 ```
 Creation of README.
 ```
+## Step 2
+
+Creation of basic project in django.
+
+```
+django-admin.exe startproject mysite
+```
