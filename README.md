@@ -1,18 +1,9 @@
 # innowacja
-## This is repository made to Project Innovation
-I will put my all files in this repository and I will try to create a good description to my steps.
 
-# Excercise 1
-## Step 1
+Podstawowy ReadMe
 
-```
-Creation of README.
-```
-## Step 2
-
-Creation of basic project in django.
-
-```
-django-admin.exe startproject mysite
-```
-The whole folder is attached on GitHub.
+Dane do logowania użytkowników:
+Użytkownik            Hasło
+User1                 asdfqwer1234
+admin                 haslo1234
+User2                 asdfqwer1234
