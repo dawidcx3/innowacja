@@ -13,6 +13,7 @@ class Cat(models.Model):
     cat_name = models.CharField(max_length=20)
     color_id = models.ForeignKey(Color, null=True, blank=True, related_name="Color", on_delete=models.SET_NULL)
     gender = models.BooleanField()
+    owner =  models.ForeignKey(User, null=True, blank=True, related_name="Cat_owner", on_delete=models.SET_NULL)
     
     def __str__(self):
         return f"{self.cat_name}"
@@ -27,10 +28,17 @@ class Hunting(models.Model):
     cat_id = models.ForeignKey(Cat, null=True, blank=True, related_name="Cat", on_delete=models.SET_NULL)
     prey_id = models.ForeignKey(Prey, null=True, blank=True, related_name="Prey", on_delete=models.SET_NULL)
     duration = models.DurationField()
+    cat_owner =  models.ForeignKey(User, null=True, blank=True, related_name="Cat_hunting_owner", on_delete=models.SET_NULL)
+    
+    def __str__(self):
+        return f"{self.id}"
       
 class Usr(models.Model):
-    user_name = models.CharField(max_length=20)
+    user_name = models.OneToOneField(User, on_delete=models.CASCADE)
     cat1_id = models.ForeignKey(Cat, null=True, blank=True, related_name="Cat1", on_delete=models.SET_NULL)
     cat2_id = models.ForeignKey(Cat, null=True, blank=True, related_name="Cat2", on_delete=models.SET_NULL)
     cat3_id = models.ForeignKey(Cat, null=True, blank=True, related_name="Cat3", on_delete=models.SET_NULL)
     cat4_id = models.ForeignKey(Cat, null=True, blank=True, related_name="Cat4", on_delete=models.SET_NULL)
+    
+    def __str__(self):
+        return f"{self.user_name}"
